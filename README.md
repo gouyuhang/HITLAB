@@ -4,5 +4,5 @@
 
 目前包含机器学习(ML)和自然语言处理(NLP)实验代码
 
-2021.6.6
-添加软件构造和编译原理代码
+2021.6.7
+添加软件构造(Software Construction)和编译系统(Compile System)代码
