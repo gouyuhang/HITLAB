@@ -1,0 +1,8 @@
+压缩包提供了src文件夹和io文件夹
+若要执行程序 在eclipse 2021.3新建一个java project
+操作：File->new->Java Project 随意命名即可
+create module选择don't create
+将压缩包中的io文件夹放在java project的目录下
+将压缩包中的src文件夹替换默认的src文件夹
+执行src/yufafenxi/ANALYER.java即可
+io文件夹下有输入输出文件
