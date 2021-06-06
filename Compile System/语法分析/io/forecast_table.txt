@@ -1,0 +1,44 @@
+forecast analysis table:
+	>		int		IDN		+		<		double		INT10		-		=		float		FLOAT		*		>=		CHAR		CHAR		/		<=		void		STR		&		&&		unsigned		;		|		||		if		(		!=		else		)		*=		do		[		/=		while		]		-=		switch		{		+=		case		return		}		#		$		
+S				S->funcfuncs								S->funcfuncs								S->funcfuncs																S->funcfuncs								S->funcfuncs																																																
+funcs				funcs->funcfuncs								funcs->funcfuncs								funcs->funcfuncs																funcs->funcfuncs								funcs->funcfuncs																																												funcs->$		funcs->$		
+func				func->typeIDN(args)func_body								func->typeIDN(args)func_body								func->typeIDN(args)func_body																func->typeIDN(args)func_body								func->typeIDN(args)func_body																																																
+type				type->int								type->double								type->float																type->void								type->unsignedtype																																																
+args				args->typeIDNarg								args->typeIDNarg								args->typeIDNarg																args->typeIDNarg								args->typeIDNarg																args->$																														args->$		
+arg																																																												arg->$																														arg->$		
+func_body																																														func_body->;																																func_body->block														
+block																																																																														block->{define_stmtsstmts}														
+define_stmts				define_stmts->define_stmtdefine_stmts		define_stmts->$						define_stmts->define_stmtdefine_stmts		define_stmts->$						define_stmts->define_stmtdefine_stmts		define_stmts->$						define_stmts->$								define_stmts->define_stmtdefine_stmts		define_stmts->$						define_stmts->define_stmtdefine_stmts								define_stmts->$		define_stmts->$										define_stmts->$						define_stmts->$						define_stmts->$								define_stmts->$		define_stmts->$				define_stmts->$		
+define_stmt				define_stmt->typeIDNinitvars;								define_stmt->typeIDNinitvars;								define_stmt->typeIDNinitvars;																define_stmt->typeIDNinitvars;								define_stmt->typeIDNinitvars;																																																
+init																		init->=expression																												init->$																				init->[num_const]																								init->$		
+vars																																														vars->$																																												vars->$		
+stmts						stmts->stmtstmts								stmts->stmtstmts								stmts->stmtstmts						stmts->stmtstmts										stmts->stmtstmts														stmts->stmtstmts		stmts->stmtstmts										stmts->stmtstmts						stmts->stmtstmts						stmts->stmtstmts						stmts->$		stmts->stmtstmts		stmts->$				stmts->$		
+stmt						stmt->assign_stmt								stmt->assign_stmt								stmt->assign_stmt						stmt->assign_stmt										stmt->assign_stmt														stmt->branch_stmt		stmt->assign_stmt										stmt->iteration_stmt						stmt->iteration_stmt						stmt->branch_stmt								stmt->jump_stmt								
+assign_stmt						assign_stmt->expression;								assign_stmt->expression;								assign_stmt->expression;						assign_stmt->expression;										assign_stmt->expression;																assign_stmt->expression;																																						
+jump_stmt																																																																																				jump_stmt->returnisnull_expr;								
+iteration_stmt																																																																iteration_stmt->doblock_stmtwhile(logical_expression);						iteration_stmt->while(logical_expression)block_stmt																						
+branch_stmt																																																				branch_stmt->if(logical_expression)block_stmtresult																								branch_stmt->switch(IDN){case_stmtcase_stmtsdefault_stmt}																
+result						result->$								result->$								result->$						result->$										result->$														result->$		result->$				result->elseblock_stmt						result->$						result->$						result->$						result->$		result->$		result->$				result->$		
+logical_expression						logical_expression->expressionbool_expression								logical_expression->expressionbool_expression								logical_expression->expressionbool_expression						logical_expression->expressionbool_expression										logical_expression->expressionbool_expression																logical_expression->expressionbool_expression																																						
+bool_expression																																										bool_expression->lopexpressionbool_expression								bool_expression->lopexpressionbool_expression										bool_expression->$																														bool_expression->$		
+lop																																										lop->&&								lop->||																																										
+case_stmts																																																																																		case_stmts->case_stmtcase_stmts								case_stmts->$		
+case_stmt																																																																																		case_stmt->caseconst:stmts										
+default_stmt																																																																																												
+block_stmt																																																																														block_stmt->{stmts}														
+isnull_expr						isnull_expr->expression								isnull_expr->expression								isnull_expr->expression						isnull_expr->expression										isnull_expr->expression								isnull_expr->$								isnull_expr->expression						isnull_expr->$																														isnull_expr->$		
+expression						expression->valueoperation								expression->valueoperation								expression->valueoperation						expression->valueoperation										expression->valueoperation																expression->valueoperation																																						
+operation		operation->compare_opvalue								operation->compare_opvalue								operation->equal_opvalue								operation->compare_opvalue								operation->compare_opvalue								operation->$				operation->$				operation->$						operation->compare_opvalue				operation->$		operation->equal_opvalue						operation->equal_opvalue						operation->equal_opvalue						operation->equal_opvalue										operation->$		
+compare_op		compare_op->>								compare_op-><																compare_op->>=								compare_op-><=																						compare_op->!=																																				
+equal_op																		equal_op->=																																												equal_op->*=						equal_op->/=						equal_op->-=						equal_op->+=												
+value						value->itemvalue'								value->itemvalue'								value->itemvalue'						value->itemvalue'										value->itemvalue'																value->itemvalue'																																						
+value'		value'->$						value'->+itemvalue'		value'->$						value'->-itemvalue'		value'->$								value'->$								value'->$								value'->$				value'->$				value'->$						value'->$				value'->$		value'->$						value'->$						value'->$						value'->$										value'->$		
+item						item->factoritem'								item->factoritem'								item->factoritem'						item->factoritem'										item->factoritem'																item->factoritem'																																						
+item'		item'->$						item'->$		item'->$						item'->$		item'->=factoritem'item'->$						item'->*factoritem'		item'->$						item'->/factoritem'		item'->$						item'->&factoritem'		item'->$				item'->$		item'->|factoritem'		item'->$						item'->$				item'->$		item'->$						item'->$						item'->$						item'->$										item'->$		
+factor						factor->IDNcall_func								factor->const								factor->const						factor->const										factor->const																factor->(value)																																						
+call_func		call_func->$						call_func->$		call_func->$						call_func->$		call_func->$						call_func->$		call_func->$						call_func->$		call_func->$						call_func->$		call_func->$				call_func->$		call_func->$		call_func->$				call_func->(es)		call_func->$				call_func->$		call_func->$						call_func->$						call_func->$						call_func->$										call_func->$		
+es						es->isnull_exprisnull_es								es->isnull_exprisnull_es								es->isnull_exprisnull_es						es->isnull_exprisnull_es										es->isnull_exprisnull_es																es->isnull_exprisnull_es						es->isnull_exprisnull_es																														es->isnull_exprisnull_es		
+isnull_es																																																												isnull_es->$																														isnull_es->$		
+const														const->num_const								const->FLOAT						const->CHAR										const->STR																																																						
+num_const														num_const->INT10																																																																														
+line 18:符号未闭合

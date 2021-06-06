@@ -1,0 +1,35 @@
+proc fuction1;
+begin
+    integer i1;
+    real i2;
+    proc fuction2;
+    begin
+        integer[10][10] arr;
+        integer m;
+        integer n;
+        integer a;
+        integer b;
+        integer c;
+        record begin real re1; integer re2; end r1;
+        while a<b do 
+            begin
+                if c<5 then 
+                	begin
+                    	c=a+b;
+                    end
+                else 
+                    begin
+                        c=a*b;
+                    end
+            end        
+        arr[0][0] = 2;
+        m=(m+n)*9;    
+    end
+    i1 = 1;
+    call fuction2(i1,i2);
+    
+    error=1;	//未声明就使用
+    i1=i1+arr;	//操作数与操作符不匹配
+    i1[0]=1;	//非数组变量访问数组
+    call i2(i1,i2);	//对非过程名使用过程调用操作符
+end

@@ -1,0 +1,3 @@
+0 [(i1,integer,0), (i2,real,4), (fuction2,º¯Êı,1), (error,integer,456)]
+1 [(arr,array(10,array(10,integer)),0), (m,integer,400), (n,integer,404), (a,integer,408), (b,integer,412), (c,integer,416), (r1,record,420)]
+2 [(re1,real,0), (re2,integer,8)]

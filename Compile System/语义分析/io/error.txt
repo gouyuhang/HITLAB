@@ -1,0 +1,4 @@
+Error at Line [31]:	[变量error引用前未声明]
+Error at Line [32]:	[整型变量与数组变量相加减]
+Error at Line [33]:	[非数组变量i1访问数组]
+Error at Line [34]:	[i2不是函数,不能用于call语句]
